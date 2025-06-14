@@ -1,0 +1,118 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOfVRuJWzcaSdoMcTIZh+gl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Phuong102006/Phuong/blob/main/Lecture%204_python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V36uJke7Ze5a",
+        "outputId": "eae2a41a-a845-40d8-f50b-ab76e9ed6d63"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "\n",
+            " first element: 1\n",
+            "Lish after modifying third element: [1, 2, 100, 4, 5, 6, 7, 8, 9, 10]\n",
+            "5 is in the list\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = [1,2,3,4,5,6,7,8,9,10]\n",
+        "for number in a:\n",
+        "  print(number)\n",
+        "first_element = a[0]\n",
+        "print(f\"\\n first element: {first_element}\")\n",
+        "a[2] = 100\n",
+        "print(f\"Lish after modifying third element: {a}\")\n",
+        "search_element = 5\n",
+        "if search_element in a:\n",
+        "  print(f\"{search_element} is in the list\")\n",
+        "else:\n",
+        "  print(f\"{search_element} is not in the list\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "python_text_content = \"Hello World\"\n",
+        "print(python_text_content)\n",
+        "with open('python_text', 'r') as file:\n",
+        "  content = file.read()\n",
+        "  print(content)\n",
+        "with open('python_text', 'w') as file:\n",
+        "  file.write('Hello VN')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 237
+        },
+        "id": "13sf2qguhYlb",
+        "outputId": "22b2ec4d-68e1-4f93-8701-44d85d33c4ce"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "FileNotFoundError",
+          "evalue": "[Errno 2] No such file or directory: 'python_text'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mFileNotFoundError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-3-a2680920d678>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mpython_text_content\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m\"Hello World\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mpython_text_content\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0;32mwith\u001b[0m \u001b[0mopen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'python_text'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'r'\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mfile\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      4\u001b[0m   \u001b[0mcontent\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mfile\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m   \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcontent\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mFileNotFoundError\u001b[0m: [Errno 2] No such file or directory: 'python_text'"
+          ]
+        }
+      ]
+    }
+  ]
+}
